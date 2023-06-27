@@ -27,8 +27,6 @@ jobs:
       - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # tag=v3.5.3
       - uses: ./github-actions/utils/checkout-and-setup-node
       - uses: ./github-actions/utils/setup-bazel-remote-exec
-        with:
-          bazelrc: .bazelrc
       - uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # tag=v3.3.1
         with:
           # TODO: setup `build --repository_cache` flag and cache the result
@@ -56,8 +54,6 @@ jobs:
       - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # tag=v3.5.3
       - uses: ./github-actions/utils/checkout-and-setup-node
       - uses: ./github-actions/utils/setup-bazel-remote-exec
-        with:
-          bazelrc: .bazelrc
       - uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # tag=v3.3.1
         with:
           # TODO: setup `build --repository_cache` flag and cache the result
@@ -94,8 +90,6 @@ jobs:
       - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # tag=v3.5.3
       - uses: ./github-actions/utils/checkout-and-setup-node
       - uses: ./github-actions/utils/setup-bazel-remote-exec
-        with:
-          bazelrc: .bazelrc
       - uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # tag=v3.3.1
         with:
           # TODO: setup `build --repository_cache` flag and cache the result

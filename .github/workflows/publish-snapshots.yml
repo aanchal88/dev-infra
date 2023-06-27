@@ -24,8 +24,6 @@ jobs:
           fetch-depth: 1
       - uses: ./github-actions/utils/checkout-and-setup-node
       - uses: ./github-actions/utils/setup-bazel-remote-exec
-        with:
-          bazelrc: .bazelrc
       - uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # tag=v3.3.1
         with:
           path: |
