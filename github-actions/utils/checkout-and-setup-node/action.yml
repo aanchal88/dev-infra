@@ -45,5 +45,5 @@ runs:
       with:
         enableCrossOsArchive: true
         path: |
-          **/node_modules
+          ./node_modules
         key: ${{ github.job }}--${{ hashFiles('**/yarn.lock') }}
