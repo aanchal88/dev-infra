@@ -17,13 +17,14 @@ inputs:
     default: '.nvmrc'
     description: |
       Relative path to the nvm version file to set node version, exclusive with
-      node-version-file-path input.  Defaults to .nvmrc
+      node-version-file-path input. Defaults to .nvmrc
 
   cache-node-modules:
+    default: true
     type: boolean
     description: |
       Whether to cache the node_modules directory, this is helpful when postinstalls are performed
-      and modify the resulting node_modules directory.  Defaults to False.
+      and modify the resulting node_modules directory. Defaults to False.
 
 runs:
   using: composite
