@@ -26,6 +26,11 @@ inputs:
       Whether to cache the node_modules directory, this is helpful when postinstalls are performed
       and modify the resulting node_modules directory. Defaults to False.
 
+  node-module-directories:
+    default: ./node_modules
+    description: |
+      Space delimited list of node_modules directories to cache. Defaults to `./node_modules`
+
 runs:
   using: composite
   steps:
@@ -44,6 +49,5 @@ runs:
       if: ${{ inputs.cache-node-modules }} == 'true'
       with:
         enableCrossOsArchive: true
-        path: |
-          ./node_modules
+        path: ${{ inputs.node-module-directories }}
         key: ${{ github.job }}--${{ hashFiles('**/yarn.lock') }}
